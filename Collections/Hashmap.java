@@ -1,0 +1,22 @@
+//Map Interface : It stores data in the key value pair
+//Key can not be duplicate
+//value can be duplicate
+import java.util.*;
+public class HashMap {
+  
+  public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   HashMap<String,Integer> hm=new HashMap<String,Integer>();
+    hm.put("madar",10);
+    hm.put("saheb",10);
+    hm.put("madar",10);  //This can not be inserted since it is duplicate key
+    hm.put("dudekula",1);
+    System.out.println(hm);
+    
+    Set<Map.Entry<String,Integer>> s=hm.entrySet();
+    for(Map.Entry<String,Integer> x: s){​​
+      System.out.println(x.getKey()+"   "+x.getValue());
+    }
+   
+  }
+}
